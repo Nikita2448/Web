@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NVIDIA Heritage — Технології та підбір GPU</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">NVIDIA <span>HERITAGE</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Історія</a></li>
+        <li><a href="gpus.html">Легендарні GPU</a></li>
+        <li><a href="tech.html" class="active">Технології</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Ключові інновації архітектури</h1>
+    <p>Технології, які перетворили відеокарти NVIDIA на стандарт індустрії для ігор, рендерингу та ШІ.</p>
+
+    <div class="tech-layout">
+      <section>
+        <div class="timeline-item">
+          <h3>CUDA (Compute Unified Device Architecture)</h3>
+          <p>Програмно-апаратна архітектура паралельних обчислень, яка дозволяє використовувати тисячі ядер GPU для математичних розрахунків, відеомонтажу та навчання нейромереж.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>RTX & RT Cores (Трасування променів)</h3>
+          <p>Спеціалізовані апаратні блоки на кристалі, які розраховують фізично коректні відбиття, тіні та глобальне освітлення в реальному часі.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>DLSS (Deep Learning Super Sampling)</h3>
+          <p>Технологія масштабування зображення на базі тензорних ядер та ШІ: гра рендериться у нижчій роздільній здатності, а нейромережа домальовує деталі до 4K і генерує проміжні кадри.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>NVIDIA Reflex</h3>
+          <p>Комплекс технологій для кіберспорту, який синхронізує роботу процесора та відеокарти, знижуючи системну затримку (Input Lag) до мінімуму.</p>
+        </div>
+      </section>
+
+      <aside>
+        <form class="fan-form" action="#" method="post">
+          <h2>Заявка на підбір відеокарти</h2>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Залиш базові параметри ПК — ми підберемо 2–3 оптимальні моделі GPU, а деталі по корпусу та роз'ємах живлення уточнимо при зв'язку.</p>
+
+          <div class="form-group">
+            <label for="cpu">Процесор (CPU)</label>
+            <input type="text" id="cpu" name="cpu" placeholder="Наприклад: Ryzen 5 7500F або Core i5-13400F" required>
+          </div>
+
+          <div class="form-group">
+            <label for="psu-watt">Потужність блоку живлення (Вт)</label>
+            <input type="number" id="psu-watt" name="psu-watt" min="400" max="1600" step="50" placeholder="Наприклад: 650 або 750" required>
+          </div>
+
+          <div class="form-group">
+            <label for="resolution">Цільова роздільна здатність</label>
+            <select id="resolution" name="resolution">
+              <option value="1080p">Full HD (1920×1080) — високий FPS</option>
+              <option value="1440p" selected>2K QHD (2560×1440) — оптимальний баланс</option>
+              <option value="4k">4K UHD (3840×2160) — максимальна графіка</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Telegram або телефон для зв'язку</label>
+            <input type="text" id="contact" name="contact" placeholder="@username або +380..." required>
+          </div>
+
+          <button type="submit" class="btn">Отримати підбір</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2026 NVIDIA Heritage — Неофіційний фан-архів історії GPU</span>
+      <span>Технології та персональний підбір</span>
+    </div>
+  </footer>
+</body>
+</html>
