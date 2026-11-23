@@ -3,109 +3,193 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NVIDIA Heritage — Легендарні відеокарти</title>
+  <title>NV HUB — Легендарні відеокарти</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo">NVIDIA <span>HERITAGE</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Історія</a></li>
+  <div class="grid-container">
+    <header class="header">
+      <h1>NV <span>HUB</span></h1>
+      <p>Еволюція характеристик та культові відеокарти GeForce від 1999 до 2025 року</p>
+    </header>
+
+    <nav class="top-menu">
+      <ul class="menu-list">
+        <li><a href="index.html">Історія та віхи</a></li>
         <li><a href="gpus.html" class="active">Легендарні GPU</a></li>
-        <li><a href="tech.html">Технології</a></li>
+        <li><a href="tech.html">Технології та підбір</a></li>
       </ul>
-    </div>
-  </header>
+    </nav>
 
-  <main class="container">
-    <h1>Еволюція флагманських відеокарт</h1>
-    <p>Як зростали об'єм відеопам'яті, частоти та складність чипів за 25 років розвитку лінійки GeForce.</p>
+    <main class="content">
+      <h2>Порівняльна таблиця поколінь</h2>
+      <p>Прогрес техпроцесу, об'єму відеопам'яті та енергоспоживання (TDP) від першого GPU до архітектури Blackwell.</p>
 
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr>
-            <th>Модель</th>
-            <th>Рік</th>
-            <th>Архітектура</th>
-            <th>Відеопам'ять</th>
-            <th>Знакова гра епохи</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>GeForce 256</strong></td>
-            <td>1999</td>
-            <td>Celsius (220 нм)</td>
-            <td>32 MB SDR / DDR</td>
-            <td>Quake III Arena</td>
-          </tr>
-          <tr>
-            <td><strong>GeForce 8800 GTX</strong></td>
-            <td>2006</td>
-            <td>Tesla (90 нм)</td>
-            <td>768 MB GDDR3</td>
-            <td>Crysis</td>
-          </tr>
-          <tr>
-            <td><strong>GeForce GTX 1080 Ti</strong></td>
-            <td>2017</td>
-            <td>Pascal (16 нм)</td>
-            <td>11 GB GDDR5X</td>
-            <td>The Witcher 3 / Cyberpunk</td>
-          </tr>
-          <tr>
-            <td><strong>GeForce RTX 2080 Ti</strong></td>
-            <td>2018</td>
-            <td>Turing (12 нм)</td>
-            <td>11 GB GDDR6</td>
-            <td>Battlefield V (Перший RTX)</td>
-          </tr>
-          <tr>
-            <td><strong>GeForce RTX 4090</strong></td>
-            <td>2022</td>
-            <td>Ada Lovelace (5 нм)</td>
-            <td>24 GB GDDR6X</td>
-            <td>Cyberpunk 2077 Path Tracing</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="table-wrap">
+        <table class="gpu-table">
+          <thead>
+            <tr>
+              <th>Модель</th>
+              <th>Рік</th>
+              <th>Архітектура</th>
+              <th>Пам'ять</th>
+              <th>TDP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>GeForce 256</strong></td>
+              <td>1999</td>
+              <td>Celsius (220 нм)</td>
+              <td>32 MB DDR</td>
+              <td>~15 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce 8800 GTX</strong></td>
+              <td>2006</td>
+              <td>Tesla (90 нм)</td>
+              <td>768 MB GDDR3</td>
+              <td>155 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce GTX 750 Ti</strong></td>
+              <td>2014</td>
+              <td>Maxwell (28 нм)</td>
+              <td>2 GB GDDR5</td>
+              <td>60 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce GTX 1060</strong></td>
+              <td>2016</td>
+              <td>Pascal (16 нм)</td>
+              <td>6 GB GDDR5</td>
+              <td>120 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce GTX 1080 Ti</strong></td>
+              <td>2017</td>
+              <td>Pascal (16 нм)</td>
+              <td>11 GB GDDR5X</td>
+              <td>250 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce RTX 2080 Ti</strong></td>
+              <td>2018</td>
+              <td>Turing (12 нм)</td>
+              <td>11 GB GDDR6</td>
+              <td>250 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce RTX 3080</strong></td>
+              <td>2020</td>
+              <td>Ampere (8 нм)</td>
+              <td>10 GB GDDR6X</td>
+              <td>320 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce RTX 4090</strong></td>
+              <td>2022</td>
+              <td>Ada Lovelace (5 нм)</td>
+              <td>24 GB GDDR6X</td>
+              <td>450 Вт</td>
+            </tr>
+            <tr>
+              <td><strong>GeForce RTX 5090</strong></td>
+              <td>2025</td>
+              <td>Blackwell (4NP)</td>
+              <td>32 GB GDDR7</td>
+              <td>575 Вт</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <h2>Картки визнання геймерів</h2>
-    <div class="grid-3">
-      <article class="card">
-        <div>
-          <h3>GeForce 8800 GTX (2006)</h3>
-          <p>Легендарний чип G80, який на роки випередив конкурентів. Перша відеокарта з підтримкою DirectX 10, яка стала єдиною, що змогла гідно запустити Crysis на релізі.</p>
-        </div>
-        <span class="tag">Король 2000-х</span>
-      </article>
+      <h2>6 культових відеокарт в історії GeForce</h2>
+      <p>Моделі, які визначили розвиток ПК-геймінгу у своєму класі — від бюджетних хітів до абсолютних флагманів.</p>
 
-      <article class="card">
-        <div>
-          <h3>GeForce GTX 1080 Ti (2017)</h3>
-          <p>Визнана спільнотою як «найкраща відеокарта в історії» за співвідношенням ціни, продуктивності та довговічності — залишалася актуальною понад 6 років після виходу.</p>
-        </div>
-        <span class="tag">Народний флагман</span>
-      </article>
+      <div class="flex-container">
+        <article class="flex-item">
+          <span class="tag">1999 • Перший GPU</span>
+          <h3>GeForce 256</h3>
+          <div>
+            <span class="spec-badge">32 MB DDR</span>
+            <span class="spec-badge">Hardware T&L</span>
+          </div>
+          <p>Перший графічний процесор у світі, який переніс розрахунок геометрії та світла з CPU на відеокарту і заклав фундамент сучасного 3D.</p>
+        </article>
 
-      <article class="card">
-        <div>
-          <h3>GeForce RTX 3080 (2020)</h3>
-          <p>Величезний стрибок продуктивності архітектури Ampere та впізнаваний дизайн Founders Edition із наскрізним продуванням радіатора двома вентиляторами.</p>
-        </div>
-        <span class="tag">Новий дизайн FE</span>
-      </article>
-    </div>
-  </main>
+        <article class="flex-item">
+          <span class="tag">2006 • Революція CUDA</span>
+          <h3>GeForce 8800 GTX</h3>
+          <div>
+            <span class="spec-badge">768 MB GDDR3</span>
+            <span class="spec-badge">Шина 384-bit</span>
+          </div>
+          <p>Легендарний флагман на базі першої уніфікованої архітектури Tesla, який став стандартом продуктивності для Crysis та епохи DirectX 10.</p>
+        </article>
 
-  <footer>
-    <div class="container footer-content">
-      <span>© 2026 NVIDIA Heritage — Неофіційний фан-архів історії GPU</span>
-      <span>Таблиця та картки характеристик</span>
-    </div>
-  </footer>
+        <article class="flex-item">
+          <span class="tag">2014 • Король апгрейду</span>
+          <h3>GeForce GTX 750 Ti</h3>
+          <div>
+            <span class="spec-badge">2 GB GDDR5</span>
+            <span class="spec-badge">60 Вт без дод. живлення</span>
+          </div>
+          <p>Народний хіт архітектури Maxwell, який працював без кабелів додаткового живлення та дозволяв перетворити будь-який офісний ПК на ігровий.</p>
+        </article>
+
+        <article class="flex-item">
+          <span class="tag">2017 • Еталон довголіття</span>
+          <h3>GeForce GTX 1080 Ti</h3>
+          <div>
+            <span class="spec-badge">11 GB GDDR5X</span>
+            <span class="spec-badge">16 нм Pascal</span>
+          </div>
+          <p>Найнадійніший флагман за всю історію компанії: завдяки 11 ГБ пам'яті карта впевнено тягнула сучасні ігри навіть через 6–7 років після релізу.</p>
+        </article>
+
+        <article class="flex-item">
+          <span class="tag">2022 • Прорив Ada</span>
+          <h3>GeForce RTX 4090</h3>
+          <div>
+            <span class="spec-badge">24 GB GDDR6X</span>
+            <span class="spec-badge">DLSS 3 Frame Gen</span>
+          </div>
+          <p>Перша відеокарта, яка зробила реальним повноцінний 4K-геймінг із трасуванням шляху (Path Tracing) та стала базою для локального ШІ.</p>
+        </article>
+
+        <article class="flex-item">
+          <span class="tag">2025 • Флагман Blackwell</span>
+          <h3>GeForce RTX 5090</h3>
+          <div>
+            <span class="spec-badge">32 GB GDDR7</span>
+            <span class="spec-badge">Шина 512-bit</span>
+          </div>
+          <p>Нове покоління флагманів із пам'яттю GDDR7, пропускною здатністю майже 1.8 ТБ/с та підтримкою нейронного рендерингу DLSS 4.</p>
+        </article>
+      </div>
+    </main>
+
+    <aside class="right-menu">
+      <h3>Орієнтир по VRAM</h3>
+      <div class="fact-box">
+        <strong>8 ГБ (RTX 4060)</strong>
+        Базовий Full HD геймінг та кіберспортивні проєкти.
+      </div>
+      <div class="fact-box">
+        <strong>12–16 ГБ (RTX 4070 / 5070 Ti)</strong>
+        Оптимальний стандарт для 2K QHD та високих налаштувань текстур.
+      </div>
+      <div class="fact-box">
+        <strong>24–32 ГБ (RTX 4090 / 5090)</strong>
+        4K Path Tracing, 3D-рендеринг, монтаж відео та локальні LLM-моделі.
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <span>© 2026 NV HUB — Навчальний проєкт</span>
+      <span>Сторінка порівняння моделей GPU</span>
+    </footer>
+  </div>
 </body>
 </html>

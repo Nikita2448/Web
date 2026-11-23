@@ -3,88 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NVIDIA Heritage — Технології та підбір GPU</title>
+  <title>NV HUB — Технології та підбір відеокарти</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container navbar">
-      <a href="index.html" class="logo">NVIDIA <span>HERITAGE</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Історія</a></li>
+  <div class="grid-container">
+    <header class="header">
+      <h1>NV <span>HUB</span></h1>
+      <p>Ключові технології архітектури та заявка на індивідуальний підбір GPU</p>
+    </header>
+
+    <nav class="top-menu">
+      <ul class="menu-list">
+        <li><a href="index.html">Історія та віхи</a></li>
         <li><a href="gpus.html">Легендарні GPU</a></li>
-        <li><a href="tech.html" class="active">Технології</a></li>
+        <li><a href="tech.html" class="active">Технології та підбір</a></li>
       </ul>
-    </div>
-  </header>
+    </nav>
 
-  <main class="container">
-    <h1>Ключові інновації архітектури</h1>
-    <p>Технології, які перетворили відеокарти NVIDIA на стандарт індустрії для ігор, рендерингу та ШІ.</p>
+    <main class="content">
+      <h2>Заявка на підбір відеокарти</h2>
+      <p>Вкажи базові параметри свого ПК (можеш обрати процесор зі списку підказок або вписати свій) — ми підберемо 2–3 оптимальні моделі GPU без упору в процесор, а габарити корпусу та роз'єми живлення уточнимо при зв'язку.</p>
 
-    <div class="tech-layout">
-      <section>
-        <div class="timeline-item">
-          <h3>CUDA (Compute Unified Device Architecture)</h3>
-          <p>Програмно-апаратна архітектура паралельних обчислень, яка дозволяє використовувати тисячі ядер GPU для математичних розрахунків, відеомонтажу та навчання нейромереж.</p>
+      <form class="gpu-form" action="#" method="post">
+        <div class="form-group">
+          <label for="cpu">Процесор (CPU)</label>
+          <input type="text" id="cpu" name="cpu" list="cpu-suggestions" placeholder="Почни вводити або обери зі списку (напр. Ryzen 5 7500F)" required>
+          <datalist id="cpu-suggestions">
+            <option value="AMD Ryzen 5 5600">
+            <option value="AMD Ryzen 5 7500F">
+            <option value="AMD Ryzen 7 5700X3D">
+            <option value="AMD Ryzen 7 7800X3D">
+            <option value="AMD Ryzen 7 9800X3D">
+            <option value="Intel Core i5-12400F">
+            <option value="Intel Core i5-13400F">
+            <option value="Intel Core i5-14600KF">
+            <option value="Intel Core i7-14700K">
+          </datalist>
         </div>
 
-        <div class="timeline-item">
-          <h3>RTX & RT Cores (Трасування променів)</h3>
-          <p>Спеціалізовані апаратні блоки на кристалі, які розраховують фізично коректні відбиття, тіні та глобальне освітлення в реальному часі.</p>
+        <div class="form-group">
+          <label for="psu-watt">Потужність блоку живлення (Вт)</label>
+          <input type="number" id="psu-watt" name="psu-watt" min="400" max="1600" step="50" placeholder="Наприклад: 650 або 750" required>
         </div>
 
-        <div class="timeline-item">
+        <div class="form-group">
+          <label for="resolution">Цільова роздільна здатність монітора</label>
+          <select id="resolution" name="resolution">
+            <option value="1080p">Full HD (1920×1080) — високий FPS</option>
+            <option value="1440p" selected>2K QHD (2560×1440) — оптимальний баланс</option>
+            <option value="4k">4K UHD (3840×2160) — максимальна графіка</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">Telegram або телефон для зв'язку</label>
+          <input type="text" id="contact" name="contact" placeholder="@username або +380..." required>
+        </div>
+
+        <button type="submit" class="btn">Отримати підбір</button>
+      </form>
+
+      <h2>Як працюють ключові технології</h2>
+      <div class="flex-container">
+        <article class="flex-item">
           <h3>DLSS (Deep Learning Super Sampling)</h3>
-          <p>Технологія масштабування зображення на базі тензорних ядер та ШІ: гра рендериться у нижчій роздільній здатності, а нейромережа домальовує деталі до 4K і генерує проміжні кадри.</p>
-        </div>
+          <p>Гра рендериться у нижчій роздільній здатності, а тензорні ядра за допомогою ШІ домальовують деталі до 4K і генерують додаткові кадри.</p>
+          <span class="tag">Тензорні ядра</span>
+        </article>
 
-        <div class="timeline-item">
+        <article class="flex-item">
+          <h3>Ray Tracing (RT Cores)</h3>
+          <p>Апаратний розрахунок фізичної траєкторії світла в реальному часі забезпечує реалістичні відбиття у воді, склі та м'які тіні.</p>
+          <span class="tag">RT-ядра</span>
+        </article>
+
+        <article class="flex-item">
           <h3>NVIDIA Reflex</h3>
-          <p>Комплекс технологій для кіберспорту, який синхронізує роботу процесора та відеокарти, знижуючи системну затримку (Input Lag) до мінімуму.</p>
-        </div>
-      </section>
+          <p>Синхронізує чергу рендерингу між CPU та GPU, прибираючи системну затримку введення (Input Lag) у динамічних шутерах.</p>
+          <span class="tag">Кіберспорт</span>
+        </article>
+      </div>
+    </main>
 
-      <aside>
-        <form class="fan-form" action="#" method="post">
-          <h2>Заявка на підбір відеокарти</h2>
-          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Залиш базові параметри ПК — ми підберемо 2–3 оптимальні моделі GPU, а деталі по корпусу та роз'ємах живлення уточнимо при зв'язку.</p>
+    <aside class="right-menu">
+      <h3>Як відбувається підбір?</h3>
+      <div class="fact-box">
+        <strong>Крок 1. Баланс CPU + GPU</strong>
+        Перевіряємо, щоб процесор повністю розкривав відеокарту в обраній роздільній здатності.
+      </div>
+      <div class="fact-box">
+        <strong>Крок 2. Запас потужності БЖ</strong>
+        Закладаємо 20–25% запасу по ватах для стабільної роботи під піковим навантаженням.
+      </div>
+      <div class="fact-box">
+        <strong>Крок 3. Уточнення деталей</strong>
+        У Telegram уточнюємо модель корпусу (довжину GPU) та роз'єми живлення 8-pin / 12V-2x6.
+      </div>
+    </aside>
 
-          <div class="form-group">
-            <label for="cpu">Процесор (CPU)</label>
-            <input type="text" id="cpu" name="cpu" placeholder="Наприклад: Ryzen 5 7500F або Core i5-13400F" required>
-          </div>
-
-          <div class="form-group">
-            <label for="psu-watt">Потужність блоку живлення (Вт)</label>
-            <input type="number" id="psu-watt" name="psu-watt" min="400" max="1600" step="50" placeholder="Наприклад: 650 або 750" required>
-          </div>
-
-          <div class="form-group">
-            <label for="resolution">Цільова роздільна здатність</label>
-            <select id="resolution" name="resolution">
-              <option value="1080p">Full HD (1920×1080) — високий FPS</option>
-              <option value="1440p" selected>2K QHD (2560×1440) — оптимальний баланс</option>
-              <option value="4k">4K UHD (3840×2160) — максимальна графіка</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="contact">Telegram або телефон для зв'язку</label>
-            <input type="text" id="contact" name="contact" placeholder="@username або +380..." required>
-          </div>
-
-          <button type="submit" class="btn">Отримати підбір</button>
-        </form>
-      </aside>
-    </div>
-  </main>
-
-  <footer>
-    <div class="container footer-content">
-      <span>© 2026 NVIDIA Heritage — Неофіційний фан-архів історії GPU</span>
-      <span>Технології та персональний підбір</span>
-    </div>
-  </footer>
+    <footer class="footer">
+      <span>© 2026 NV HUB — Навчальний проєкт</span>
+      <span>Технології та персональний підбір GPU</span>
+    </footer>
+  </div>
 </body>
 </html>
